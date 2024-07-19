@@ -1,11 +1,11 @@
-use serde::{Deserialize, Serialize};
+use serde::Serialize;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize)]
 struct Paragraph {
     name: String,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize)]
 struct Article {
     article: String,
     author: String,
