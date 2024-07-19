@@ -1,11 +1,11 @@
-use serde::{Deserialize, Serialize};
+use serde::Deserialize;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Deserialize)]
 struct Paragraph {
     name: String,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Deserialize)]
 struct Article {
     article: String,
     author: String,
@@ -39,7 +39,7 @@ fn main() {
             {
                 "name": "end of the paragraph"
             }
-        ],
+        ]
     }"#;
 
     let parsed: Article = read_json_typed(json);
