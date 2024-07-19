@@ -5,11 +5,11 @@ fn read_from_file(path: &str) -> Result<(), Box<dyn Error>> {
     let mut reader = csv::Reader::from_path(path)?;
 
     for result in reader.records() {
-        let record = result?;
-        println!("{:?}", record);
+        println!("{:?}", result);
     }
 
-    // Should not add semicolon for implicit return
+    // This means that the function executed successfully
+    // You are returning an empty tuple (comes from the Result type)
     Ok(())
 }
 
